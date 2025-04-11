@@ -1,0 +1,31 @@
+{
+    "meta": {
+      "version": "1.0.0",
+      "name": "Clavis Launcher",
+      "description": "클래비스 서버 전용 런처",
+      "author": "Clavis"
+    },
+    "mainClass": "net.fabricmc.loader.impl.launch.knot.KnotClient",
+    "game": {
+      "version": "1.20.1",
+      "modloader": {
+        "id": "fabric-loader",
+        "version": "0.16.4"
+      },
+      "javaArgs": [
+        "-Xmx4G"
+      ],
+      "server": {
+        "ip": "clavis06.kro.kr",
+        "port": 25565
+      }
+    },
+    "mods": [
+      {
+        "id": "modpack",
+        "artifact": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/clavis-modpack.zip",
+        "type": "modpack"
+      }
+    ]
+  }
+  
