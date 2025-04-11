@@ -1,30 +1,101 @@
 {
-  "meta": {
-    "version": "1.0.0",
-    "name": "Clavis Launcher",
-    "description": "클래비스 서버 전용 런처",
-    "author": "Clavis"
-  },
-  "mainClass": "net.fabricmc.loader.impl.launch.knot.KnotClient",
-  "game": {
-    "version": "1.20.1",
-    "modloader": {
-      "id": "fabric-loader",
-      "version": "0.16.4"
-    },
-    "javaArgs": [
-      "-Xmx4G"
-    ],
-    "server": {
-      "ip": "clavis06.kro.kr",
-      "port": 25565
+    "mainService": {
+      "id": "clavis_fabric",
+      "name": "Clavis Fabric Launcher",
+      "description": "Fabric 기반 자동 서버 접속 런처",
+      "game": {
+        "version": "1.20.1",
+        "modLoader": "fabric",
+        "loaderVersion": "0.16.7",
+        "mainClass": "net.minecraft.client.main.Main",
+        "arguments": {
+          "game": [
+            "--quickPlayMultiplayer",
+            "clavis06.kro.kr"
+          ]
+        }
+      },
+      "jvmArguments": [
+        "-Xmx4G",
+        "-Xms2G"
+      ],
+      "mods": [
+        {
+          "id": "fabric-api",
+          "name": "Fabric API",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/fabric-api-0.91.0+1.20.1.jar"
+        },
+        {
+          "id": "sodium",
+          "name": "Sodium",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/sodium-fabric-mc1.20.1-0.5.3.jar"
+        },
+        {
+          "id": "appleskin",
+          "name": "AppleSkin",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/appleskin-fabric-mc1.20.1-2.5.1.jar"
+        },
+        {
+          "id": "bobby",
+          "name": "Bobby",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/bobby-5.0.1.jar"
+        },
+        {
+          "id": "boosted-brightness",
+          "name": "Boosted Brightness",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/boosted-brightness-2.2.0+1.20.1.jar"
+        },
+        {
+          "id": "iris",
+          "name": "Iris",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/iris-mc1.20.1-1.6.11.jar"
+        },
+        {
+          "id": "jmi",
+          "name": "JMI",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/jmi-fabric-1.20.1-0.14-48.jar"
+        },
+        {
+          "id": "journeymap",
+          "name": "JourneyMap",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/journeymap-1.20.1-5.10.3-fabric.jar"
+        },
+        {
+          "id": "koreanpatch",
+          "name": "Korean Patch",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/koreanpatch-1.3.1-1.20.1.jar"
+        },
+        {
+          "id": "nmuk",
+          "name": "NMUK",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/nmuk-1.1.1+mc1.20.1.jar"
+        },
+        {
+          "id": "nofog",
+          "name": "NoFog",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/NoFog-1.3.6+116.5-1.21.jar"
+        },
+        {
+          "id": "reeses_sodium_options",
+          "name": "Reese's Sodium Options",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/reeses_sodium_options-1.6.5+mc1.20.1-build.95.jar"
+        },
+        {
+          "id": "shulkerboxtooltip",
+          "name": "Shulker Box Tooltip",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/shulkerboxtooltip-fabric-4.0.4+1.20.1.jar"
+        },
+        {
+          "id": "simple-hud-utilities",
+          "name": "Simple HUD Utilities",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/simple-hud-utilities-2.6.0.jar"
+        },
+        {
+          "id": "voicechat",
+          "name": "Voice Chat",
+          "url": "https://github.com/kowka0402/Tower-of-Trials/releases/download/v1.0.0/voicechat-fabric-1.20.1-2.5.25.jar"
+        }
+      ]
     }
-  },
-  "mods": [
-    {
-      "id": "modpack",
-      "artifact": "https://kowka0402.github.io/Tower-of-Trials/clavis-modpack.zip",
-      "type": "modpack"
-    }
-  ]
-}
+  }
+  
